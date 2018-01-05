@@ -1,0 +1,30 @@
+(in-package :spider-test)
+
+;; NOTE: To run this test file, execute `(asdf:test-system :spider)' in your Lisp.
+
+(plan nil)
+
+(let ((instance (make-instance 'has-properties)))
+  (add-property 'name "Jerome" instance)
+  (add-property 'year-of-birth 1966 instance)
+  (add-property 'month-of-birth 7 instance)
+  (add-property 'day-of-birth 31 instance)
+  (add-property 'place-of-birth "Singapore" instance)
+  (ok (equal (get-property 'name instance) "Jerome"))
+  (ok (equal (get-property 'year-of-birth instance) 1966))
+  (ok (equal (get-property 'month-of-birth instance) 7))
+  (ok (equal (get-property 'day-of-birth instance) 31))
+  (ok (equal (get-property 'place-of-birth instance) "Singapore"))
+  (ok (not (get-property 'asjs instance)))
+  (remove-property 'name instance)
+  (remove-property 'year-of-birth instance)
+  (remove-property 'month-of-birth instance)
+  (remove-property 'day-of-birth instance)
+  (remove-property 'place-of-birth instance)
+  (ok (not (get-property 'name instance)))
+  (ok (not (get-property 'year-of-birth instance)))
+  (ok (not (get-property 'month-of-birth instance)))
+  (ok (not (get-property 'day-of-birth instance)))
+  (ok (not (get-property 'place-of-birth instance))))
+
+(finalize)
