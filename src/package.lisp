@@ -13,8 +13,8 @@
    :get-property
    :remove-property
 
-   :identifiable
-   :equal-identifiable))
+   :has-identity
+   :equal-identity))
 
 (in-package :spider)
 
