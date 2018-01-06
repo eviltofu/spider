@@ -1,8 +1,8 @@
 (in-package :spider)
 
 (defclass has-tags ()
-  ((values
-    :initarg :values
+  ((tag-values
+    :initarg :tag-values
     :initform (make-hash-table)
     :accessor has-tags-values)))
 
@@ -21,4 +21,3 @@
 (defmethod remove-tag ((tag symbol) (tags has-tags))
   (with-accessors ((hash has-tags-values)) tags
     (remhash tag hash)))
-

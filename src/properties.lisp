@@ -1,7 +1,7 @@
 (in-package :spider)
 
 (defclass has-properties ()
-  ((values
+  ((properties-values
     :initarg :value
     :initform (make-hash-table)
     :accessor has-properties-values)))

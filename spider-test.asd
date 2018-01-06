@@ -14,8 +14,8 @@
                 ((:file "package")
 		 (:test-file "tags")
 		 (:test-file "properties")
-		 (:test-file "connections")
-		 (:test-file "identifiables"))))
+		 (:test-file "identifiables")
+		 (:test-file "connections"))))
   :description "Test system for spider"
 
   :perform (test-op (op c) (symbol-call :prove-asdf :run-test-system c)))

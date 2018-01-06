@@ -19,8 +19,8 @@
                 ((:file "package")
 		 (:file "tags")
 		 (:file "properties")
-		 (:file "connections")
-		 (:file "identifiables"))))
+		 (:file "identifiables")
+		 (:file "connections"))))
   :description "A simple graph database"
   :long-description
   #.(read-file-string

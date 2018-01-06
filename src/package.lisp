@@ -14,7 +14,19 @@
    :remove-property
 
    :has-identity
-   :equal-identity))
+   :has-identity-symbol
+   :equal-identity
+
+   :connection
+   :equal-connection-source
+   :equal-connection-destination
+   :equal-connection
+
+   :has-connections
+   :add-connection
+   :has-connection-to
+   :has-connection-from
+   :remove-connection))
 
 (in-package :spider)
 
